@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -19,10 +18,12 @@ ActiveRecord::Schema.define(version: 5) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
+    t.integer "artist_id"
+    t.integer "song_id"
   end
 
   create_table "songs", force: :cascade do |t|
-    t.string  "name"
+    t.string "name"
     t.integer "artist_id"
     t.integer "genre_id"
   end
